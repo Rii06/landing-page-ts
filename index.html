@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+  <title>Tegoer Sapa</title>
+  <link rel="shortcut icon" href=".\assets\img\logo-baruu.jpg">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #014126;
+      --secondary: #3aaa35;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--white);
+      color: var(--primary);
+      background-color: var(--white);
+      color: var(--primary);
+    }
+
+    .navbar {
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-transparent {
+      background-color: transparent !important;
+    }
+
+    .navbar-scrolled {
+      background-color: #014126;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: 600;
+      /* Montserrat SemiBold */
+    }
+
+    .hero {
+      background: url('images/hero.jpg') center center / cover no-repeat;
+      height: 100vh;
+      position: relative;
+      color: white;
+      display: flex;
+      overflow: hidden;
+      /* ini yang mencegah img keluar section */
+      height: 100vh;
+      /* atau tinggi sesuai kebutuhan */
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* pastikan gambar memenuhi area dengan crop proporsional */
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(1, 65, 38, 0.6);
+      /* dark overlay */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-weight: 900;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      font-weight: 400
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .h2,
+    h3,
+    h5 {
+      font-weight: 600;
+      /* SemiBold */
+    }
+
+    .service-icon {
+      color: #014126;
+      /* hijau tua */
+    }
+
+    .garis-abu {
+      height: 1px;
+      width: 40px;
+      /* Atur panjang sesuai keinginan */
+      background-color: #ccc;
+      /* Warna abu-abu */
+    }
+
+    .portfolio-item {
+      cursor: pointer;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(1, 65, 38, 0.8);
+      /* Warna oranye semi-transparan */
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .border-end {
+      border-right: 1px solid #ccc !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-primary navbar-transparent" style="background-color: #014126;">
+    <div class="container">
+      <img src=".\assets\img\logo.PNG" class="navbar-brand" style="height: 60px;" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        style="background-color: #ffffff;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#fitur" style="color: #ccc;">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio" style="color: #ccc;">Portopolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak" style="color: #ccc;">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang" style="color: #ccc;">Tentang</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <img src=".\assets\img\main.jpg" alt="">
+    </div>
+    <div class="hero-content">
+      <h1 class="display-4" style="font-weight: 900;">TEGOER SAPA</h1>
+      <p class="lead" style="font-weight: 400;">
+        <span style="font-weight: 600;">Respect The Moment</span> Every Second Matters
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Konten Lanjutan -->
+  <section id="fitur" class="py-5">
+    <div class="container text-center">
+      <div class="d-flex align-items-center justify-content-center mb-4">
+        <div class="garis-abu me-3"></div>
+        <h2 class="fw-bold mb-0">LAYANAN KAMI</h2>
+        <div class="garis-abu ms-3"></div>
+      </div>
+      <p class="mb-5">Layanan utama yang kami sediakan untuk memenuhi kebutuhan fotografi Anda</p>
+      <div class="row g-4">
+        <!-- 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center px-3 h-100 d-flex flex-column justify-content-center border-end">
+            <h5 class="fw-bold mb-2">PHOTOBOOTH</h5>
+            <p class="mb-0">Foto instan di acara dengan properti lucu dan kamera otomatis.</p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center px-3 h-100 d-flex flex-column justify-content-center border-end">
+            <h5 class="fw-bold mb-2">PHOTOBOX</h5>
+            <p class="mb-0">Mesin foto di tempat umum yang mencetak foto secara instan dengan berbagai pilihan frame.
+            </p>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center px-3 h-100 d-flex flex-column justify-content-center border-end">
+            <h5 class="fw-bold mb-2">SELF PHOTO STUDIO</h5>
+            <p class="mb-0">Studio tanpa photographer, ambil gambar sendiri dengan kualitas tinggi.</p>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="text-center px-3 h-100 d-flex flex-column justify-content-center">
+            <h5 class="fw-bold mb-2">PROFESIONAL PHOTO</h5>
+            <p class="mb-0">Profesional photographer dengan hasil premium yang ditata dengan gaya.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Galeri / Portfolio -->
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <div class="row g-3">
+        <!-- Item -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\openSpace\Randy Zulseka-58.jpg" class="img-fluid" alt="Project 1">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">SELF PHOTO STUDIO</span>
+              <h5 class="text-white fw-bold mb-0">Open Space</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Ulangi item ini sebanyak yang dibutuhkan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\Reguler\Kevin-42.jpg" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">SELF PHOTO STUDIO</span>
+              <h5 class="text-white fw-bold mb-0">Reguler</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Tambah item lainnya sesuai kebutuhan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\redCurtain\Deka-28.jpg" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">SELF PHOTO STUDIO</span>
+              <h5 class="text-white fw-bold mb-0">Red Curtain</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Tambah item lainnya sesuai kebutuhan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\flatBox\Aya-95.jpg" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">SELF PHOTO STUDIO</span>
+              <h5 class="text-white fw-bold mb-0">Flat Box</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Tambah item lainnya sesuai kebutuhan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\Wedding\20241103_134003_812.jpg" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">PHOTOBOOTH</span>
+              <h5 class="text-white fw-bold mb-0">Wedding</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Tambah item lainnya sesuai kebutuhan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\birthday\20250112_180752_342.jpg" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">PHOTOBOOTH</span>
+              <h5 class="text-white fw-bold mb-0">Birthday</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Tambah item lainnya sesuai kebutuhan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\event\20241020_002516_562.jpg" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">PHOTOBOOTH</span>
+              <h5 class="text-white fw-bold mb-0">Event</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Tambah item lainnya sesuai kebutuhan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\Photobox\52b82a12-65ef-40e8-b002-87bb9ceefd0a.png" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">PHOTOBOX</span>
+              <h5 class="text-white fw-bold mb-0">TS x Jitterbug</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Tambah item lainnya sesuai kebutuhan -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="portfolio-item position-relative overflow-hidden">
+            <img src=".\assets\img\Graduation\Putri-86.jpg" class="img-fluid" alt="Project 2">
+            <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center">
+              <span class="text-uppercase text-white small">PROFESIONAL PHOTO</span>
+              <h5 class="text-white fw-bold mb-0">Graduation</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <section id="tentang"></section>
+  <section id="kontak"></section>
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <!-- Informasi Kontak -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Kontak Kami</h5>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Jl. STM Ruko No. 4, Banjarbaru Depan SPBU</p>
+          <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>tegoersapaa@gmail.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i>+62 822-5409-2927</p>
+        </div>
+
+        <!-- Sosial Media -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Ikuti Kami</h5>
+          <a href="#" class="text-white d-block mb-1"><i class="bi bi-instagram me-2"></i>@tegoersapa.studio</a>
+          <a href="#" class="text-white d-block mb-1"><i class="bi bi-instagram me-2"></i>@tegoersapa.photobooth</a>
+          <a href="#" class="text-white d-block mb-1"><i class="bi bi-instagram me-2"></i>@bertegoersapa_</a>
+          <a href="#" class="text-white d-block"><i class="bi bi-tiktok me-2"></i>@tegoersapaa</a>
+        </div>
+
+        <!-- Hak Cipta -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Tentang Kami</h5>
+          <p>Kami adalah penyedia layanan fotografi modern seperti photobooth, self photo studio, hingga foto
+            profesional untuk berbagai kebutuhan Anda.</p>
+        </div>
+      </div>
+      <hr class="border-light" />
+      <div class="text-center">
+        <small>© 2024 TegoerSapa. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Scroll navbar behavior
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+        navbar.classList.add('navbar-transparent');
+      }
+    });
+  </script>
+</body>
+
+</html>
